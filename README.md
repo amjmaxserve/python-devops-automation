@@ -2,41 +2,53 @@
 
 ## Overview
 
-A comprehensive collection of Python fundamentals and advanced networking examples designed for DevOps automation professionals. This repository serves as a learning resource covering core Python concepts, file I/O operations, control flow, functions, modules, and network programming with socket implementations.
+A learning-focused repository for Python automation, API integration, networking, and PostgreSQL database workflows tailored to DevOps and infrastructure practitioners. It contains sample scripts for Python fundamentals, file operations, HTTP APIs, scheduling, web scraping, socket programming, and database automation.
 
-**Target Audience:** DevOps Engineers, System Administrators, and Python Developers  
+**Target Audience:** DevOps Engineers, Python Developers, Automation Specialists  
 **Skill Level:** Beginner to Intermediate  
 **Python Version:** 3.12+
 
 ---
 
-## 📋 Project Structure
+## 📋 Updated Project Structure
 
 ```
 devops-python/
-├── 1-hello.py                    # Basic Python syntax and data types
-├── 2-fileread.py                 # File reading operations
-├── 2-filewrite.py                # File writing operations
-├── 3-fileoperations.py           # Advanced file manipulation
-├── 4-ifelse.py                   # Conditional statements
-├── 4-loops.py                    # Loop structures (for/while)
-├── 4-break-continue.py           # Loop control flow
-├── 4-oddeven.py                  # Conditional logic example
-├── 5-functions.py                # Function definition and usage
-├── 5-modules.py                  # Module imports and reusability
-├── math_operations.py            # Mathematical utility module
-├── networking/                   # Network programming examples
-│   ├── 6-networking-client.py    # TCP client implementation
-│   ├── 6-networking-request.py   # HTTP request handling
-│   ├── 6-networking-scap.py      # Network packet analysis
-│   └── 6-networking-server.py    # TCP server implementation
-├── sockets/                      # Advanced socket programming
-│   ├── client.py                 # Socket client application
-│   ├── server.py                 # Socket server application
-│   └── soc.py                    # Socket utility functions
-├── devops-python-venv/           # Virtual environment (Python 3.12)
-├── arjun.txt                     # Sample data file
-└── README.md                     # This file
+├── 1-hello.py
+├── 2-fileread.py
+├── 2-filewrite.py
+├── 3-fileoperations.py
+├── 4-ifelse.py
+├── 4-loops.py
+├── 4-break-continue.py
+├── 4-oddeven.py
+├── 5-functions.py
+├── 5-modules.py
+├── math_operations.py
+├── networking/
+│   ├── 6-networking-client.py
+│   ├── 6-networking-request.py
+│   ├── 6-networking-scap.py
+│   └── 6-networking-server.py
+├── sockets/
+│   ├── client.py
+│   ├── server.py
+│   └── soc.py
+├── apis/
+│   ├── api-ex.py
+│   └── api-req.py
+├── automation/
+│   ├── getlinks.py
+│   ├── par.py
+│   ├── par2.py
+│   ├── task_schedule.py
+│   └── output.json
+├── python-postgres/
+│   └── postgres-python.py
+├── requirements.txt
+├── devops-python-venv/
+├── arjun.txt
+└── README.md
 ```
 
 ---
@@ -47,22 +59,22 @@ devops-python/
 
 | File | Topic | Key Concepts |
 |------|-------|--------------|
-| `1-hello.py` | Basic Syntax | Variables, data types (int, str, float), print statements |
-| `2-fileread.py` | File Reading | File handling, read operations, resource management |
-| `2-filewrite.py` | File Writing | Creating/writing files, data persistence |
-| `3-fileoperations.py` | File Management | Rename, delete, check existence operations |
-| `4-ifelse.py` | Conditionals | If/elif/else statements, boolean logic |
-| `4-loops.py` | Iteration | For and while loops, iteration patterns |
-| `4-break-continue.py` | Flow Control | Loop control with break/continue statements |
-| `4-oddeven.py` | Logic Application | Practical conditional logic |
+| `1-hello.py` | Basic Syntax | Variables, data types, print output |
+| `2-fileread.py` | File Reading | File opening, reading, closing |
+| `2-filewrite.py` | File Writing | Writing text files, file persistence |
+| `3-fileoperations.py` | File Utilities | Rename, delete, and filesystem checks |
+| `4-ifelse.py` | Conditionals | If/elif/else logic, boolean evaluation |
+| `4-loops.py` | Iteration | For loops, while loops, sequence iteration |
+| `4-break-continue.py` | Loop Control | `break`, `continue`, loop termination |
+| `4-oddeven.py` | Conditional Logic | Even/odd checks and branching |
 
 ### 2. **Functions & Modules** (Module 5)
 
 | File | Purpose |
 |------|---------|
-| `5-functions.py` | Function definition, parameters, return values, practical examples |
-| `5-modules.py` | Module imports, code reusability, namespace management |
-| `math_operations.py` | Reusable mathematical utilities (add, subtract, multiply, divide) |
+| `5-functions.py` | Defining and calling functions, return values |
+| `5-modules.py` | Importing modules and using shared utilities |
+| `math_operations.py` | Mathematical helper functions |
 
 ### 3. **Network Programming** (Module 6)
 
@@ -70,11 +82,28 @@ devops-python/
 |------|---------|
 | `networking/6-networking-client.py` | TCP client socket communication |
 | `networking/6-networking-server.py` | TCP server socket communication |
-| `networking/6-networking-request.py` | HTTP request handling |
-| `networking/6-networking-scap.py` | Network packet analysis with Scapy |
-| `sockets/client.py` | Advanced client implementation |
-| `sockets/server.py` | Advanced server implementation |
-| `sockets/soc.py` | Socket utility functions |
+| `networking/6-networking-request.py` | HTTP request handling example |
+| `networking/6-networking-scap.py` | Packet analysis with Scapy |
+| `sockets/client.py` | Socket client implementation |
+| `sockets/server.py` | Socket server implementation |
+| `sockets/soc.py` | Socket utilities and helpers |
+
+### 4. **API & Automation Examples**
+
+| File | Purpose |
+|------|---------|
+| `apis/api-ex.py` | HTTP GET request example using `requests` |
+| `apis/api-req.py` | HTTP PUT and DELETE request examples |
+| `automation/getlinks.py` | Web scraping with BeautifulSoup |
+| `automation/par.py` | JSON parsing and manipulation |
+| `automation/par2.py` | Additional parsing utilities |
+| `automation/task_schedule.py` | Scheduled task execution with `schedule` |
+
+### 5. **Database Automation**
+
+| File | Purpose |
+|------|---------|
+| `python-postgres/postgres-python.py` | PostgreSQL connection and database automation using `psycopg2` |
 
 ---
 
@@ -83,76 +112,79 @@ devops-python/
 ### Prerequisites
 
 - **Python:** 3.12 or higher
-- **pip:** Package manager for Python
-- **Virtual Environment:** Recommended for dependency isolation
+- **pip:** Python package manager
+- **Virtual environment:** Recommended for dependency isolation
 
 ### Installation
 
-1. **Clone the repository:**
+1. Clone the repository:
    ```bash
    git clone <repository-url>
    cd devops-python
    ```
 
-2. **Create and activate virtual environment:**
+2. Create and activate a virtual environment:
    ```bash
-   # Create virtual environment
    python3.12 -m venv devops-python-venv
-
-   # Activate virtual environment
    source devops-python-venv/bin/activate  # Linux/macOS
    # or
    devops-python-venv\Scripts\activate  # Windows
    ```
 
-3. **Install dependencies (if any):**
+3. Install dependencies:
    ```bash
-   pip install -r requirements.txt  # If requirements.txt exists
-   # For networking examples with Scapy:
-   pip install scapy
+   pip install -r requirements.txt
+   ```
+
+4. Install optional extras used by some examples:
+   ```bash
+   pip install beautifulsoup4 schedule psycopg2-binary
    ```
 
 ---
 
 ## 📖 Usage Examples
 
-### Running Basic Python Examples
+### Basic Python Examples
 
 ```bash
-# Run hello world example
 python 1-hello.py
-
-# Run file reading example
 python 2-fileread.py
-
-# Run functions example
 python 5-functions.py
 ```
 
-### Testing Module Imports
+### API Examples
 
 ```bash
-# Test module import functionality
-python 5-modules.py
+python apis/api-ex.py
+python apis/api-req.py
 ```
 
-### Running Network Examples
+### Automation Examples
 
 ```bash
-# Terminal 1: Start server
-python networking/6-networking-server.py
+python automation/getlinks.py
+python automation/par.py
+python automation/task_schedule.py
+```
 
-# Terminal 2: Run client
+### PostgreSQL Example
+
+```bash
+python python-postgres/postgres-python.py
+```
+
+### Networking Examples
+
+```bash
+python networking/6-networking-server.py
 python networking/6-networking-client.py
 ```
 
-### Using Socket Programming
+### Socket Programming Examples
 
 ```bash
-# Start socket server
 python sockets/server.py
-
-# In another terminal, start client
 python sockets/client.py
 ```
 
@@ -164,144 +196,116 @@ python sockets/client.py
 
 **Variables & Data Types**
 - Integers, floats, strings
-- Variable assignment and manipulation
-- Type conversions
+- Variable assignment and printing
+- Basic expressions and formatting
 
 **File Operations**
-- Reading file contents
-- Writing data to files
-- File path manipulation
-- Error handling
+- Open, read, write, and close files
+- File system checks
+- Data persistence
 
 **Control Structures**
-- Conditional branching (if/elif/else)
-- Loop iteration (for/while)
-- Loop control (break/continue)
-- Logical operators
+- Conditional branching (`if`, `elif`, `else`)
+- Iterative loops (`for`, `while`)
+- Loop control with `break` and `continue`
 
 **Functions**
-- Function definition and parameters
-- Return statements
-- Function calls and arguments
-- Scope and namespace
+- Defining reusable functions
+- Passing arguments and returning values
+- Reuse across scripts
 
 **Modules**
-- Importing modules
-- Creating reusable code
-- Namespace management
-- Module-level functions
+- Built-in and custom module imports
+- Encapsulation of shared logic
+- Code organization and reuse
 
-### Network Programming Features
+**API & Automation**
+- REST API calls with `requests`
+- JSON serialization and parsing
+- HTML parsing with BeautifulSoup
+- Task scheduling with `schedule`
 
-**Socket Communication**
-- TCP client-server architecture
-- Socket creation and binding
-- Connection handling
-- Data transmission/reception
+**Database Automation**
+- PostgreSQL connection management
+- Query execution and result handling
+- Database creation and metadata inspection
 
-**HTTP Networking**
-- HTTP request handling
-- Request/response cycles
-- URL operations
-
-**Packet Analysis**
-- Network packet inspection
-- Protocol analysis with Scapy
-- Traffic monitoring
+**Network Programming**
+- TCP socket communication
+- Server/client lifecycle management
+- Data send/receive workflows
+- Packet inspection with Scapy
 
 ---
 
 ## 🔧 Configuration
 
-### Virtual Environment Structure
+### Virtual Environment
 
-The included `devops-python-venv/` contains:
-- **Python 3.12** interpreter
-- **pip** package manager
-- Pre-installed packages: setuptools, wheel, pip
-- Optional: Scapy for network analysis
+The `devops-python-venv/` virtual environment contains:
+- Python 3.12 interpreter
+- pip package manager
+- Standard build tools such as `setuptools` and `wheel`
+
+### Recommended Packages
+
+- `requests`
+- `beautifulsoup4`
+- `schedule`
+- `psycopg2-binary`
+- `scapy`
 
 ---
 
 ## 💡 Best Practices Demonstrated
 
 ✅ Modular code organization  
-✅ Proper file handling with resource closure  
-✅ Function reusability  
-✅ Module imports for code organization  
-✅ Error handling (division by zero checks)  
-✅ Socket communication patterns  
-✅ Configuration management (host/port definitions)
+✅ Proper file handling  
+✅ Function reuse and abstraction  
+✅ API request workflows  
+✅ JSON parsing and automation scripting  
+✅ Scheduled task execution  
+✅ PostgreSQL database automation  
+✅ Socket-based network communication  
+✅ Clean dependency and environment management
 
 ---
 
-## 🎓 Learning Path
+## 🎓 Recommended Learning Path
 
-**Recommended progression:**
-
-1. Start with `1-hello.py` - Understand basic syntax
-2. Progress through modules 2-4 - Learn file operations and control flow
-3. Complete module 5 - Master functions and modules
-4. Explore networking - Understand network programming fundamentals
-5. Experiment with sockets - Practice client-server architecture
+1. Start with `1-hello.py`
+2. Continue through file I/O and control flow examples
+3. Learn function and module structure in `5-functions.py` and `5-modules.py`
+4. Practice API and automation flows in `apis/` and `automation/`
+5. Explore sockets and networking scripts in `networking/` and `sockets/`
+6. Review the database automation example in `python-postgres/postgres-python.py`
 
 ---
 
 ## 📚 Key Concepts Covered
 
-| Concept | Files | Difficulty |
-|---------|-------|-----------|
+| Concept | Files | Level |
+|---------|-------|-------|
 | Variables & Types | 1-hello.py | Beginner |
 | File I/O | 2-fileread.py, 2-filewrite.py, 3-fileoperations.py | Beginner |
 | Conditionals | 4-ifelse.py, 4-oddeven.py | Beginner |
 | Loops | 4-loops.py, 4-break-continue.py | Beginner |
 | Functions | 5-functions.py | Beginner |
 | Modules | 5-modules.py, math_operations.py | Intermediate |
+| HTTP APIs | apis/api-ex.py, apis/api-req.py | Intermediate |
+| Automation | automation/*.py | Intermediate |
+| PostgreSQL | python-postgres/postgres-python.py | Intermediate |
 | Networking | networking/*, sockets/* | Intermediate |
-
----
-
-## 🔍 Sample Code Snippets
-
-### File Reading
-```python
-file = open('arjun.txt', 'r')
-content = file.read()
-print(content)
-file.close()
-```
-
-### Function Definition
-```python
-def greet(name):
-    print(f"Hello, {name}!!!")
-
-greet('arjun')
-```
-
-### Module Import
-```python
-import math_operations
-result = math_operations.add(5, 6)
-print(f"Result: {result}")
-```
-
-### Socket Client
-```python
-import socket
-client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client_socket.connect(('127.0.0.1', 12345))
-client_socket.send("Hello Server!".encode('utf-8'))
-```
 
 ---
 
 ## ⚠️ Important Notes
 
-- **File Paths:** Ensure `arjun.txt` exists in the root directory when running file operation examples
-- **Network Examples:** Require server to be running before starting client
-- **Port Availability:** Default port 12345 must be available
-- **Scapy:** Network packet analysis examples require appropriate permissions (may need sudo on Linux)
+- Ensure `arjun.txt` exists for file I/O examples.
+- Run server scripts before client scripts in networking examples.
+- Update PostgreSQL credentials in `python-postgres/postgres-python.py` before execution.
+- Install optional packages when using BeautifulSoup, scheduling, or PostgreSQL examples.
+- Some network and Scapy examples may require elevated permissions.
 
 ---
 
@@ -309,19 +313,22 @@ client_socket.send("Hello Server!".encode('utf-8'))
 
 | Issue | Solution |
 |-------|----------|
-| `ModuleNotFoundError` | Ensure you're in the correct directory and virtual environment is activated |
-| `FileNotFoundError` | Verify file paths are correct relative to script location |
-| `ConnectionRefusedError` | Ensure server is running before starting client |
-| `Permission denied (sockets)` | Run with elevated privileges or use non-privileged ports |
+| `ModuleNotFoundError` | Activate virtual environment and install dependencies |
+| `FileNotFoundError` | Confirm the working directory and file path |
+| `ConnectionRefusedError` | Start the network server before the client |
+| PostgreSQL connection error | Verify host, port, user, and password |
+| Permission denied | Use a non-privileged port or run with elevated privileges |
 
 ---
 
 ## 📖 Additional Resources
 
-- [Python Official Documentation](https://docs.python.org/3.12/)
-- [Socket Programming Guide](https://docs.python.org/3.12/library/socket.html)
+- [Python Documentation](https://docs.python.org/3.12/)
+- [Requests Documentation](https://docs.python-requests.org/)
+- [BeautifulSoup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+- [psycopg2 Documentation](https://www.psycopg.org/docs/)
 - [Scapy Documentation](https://scapy.readthedocs.io/)
-- [DevOps with Python](https://www.packtpub.com/product/python-devops/)
+- [Socket Programming Guide](https://docs.python.org/3.12/library/socket.html)
 
 ---
 
@@ -338,16 +345,5 @@ This project is provided as-is for educational purposes.
 
 ---
 
-## 🤝 Contributing
-
-Contributions and improvements are welcome! Feel free to:
-- Add more examples
-- Improve documentation
-- Suggest additional networking examples
-- Report issues or bugs
-
----
-
 **Last Updated:** May 2026  
-**Status:** Active Learning Project  
-**Maintenance:** Regular updates as learning progresses
+**Status:** Active Learning Project
